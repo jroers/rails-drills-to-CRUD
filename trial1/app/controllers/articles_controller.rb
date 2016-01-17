@@ -12,4 +12,8 @@ class ArticlesController < ApplicationController
 		@article = Article.create(article_params)
 		redirect_to "/users/#{session[:user_id]}/articles"
 	end
+
+	def show
+		@article = Article.find_by_id(params[:id])
+	end
 end
