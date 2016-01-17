@@ -1,0 +1,12 @@
+<h1>New post:</h1>
+
+<%= form_for @article, url: "/users/:user_id/articles" do |f| %>
+	<div>
+		<%= f.text_field :title, placeholder: "Title" %>
+	</div>
+	<div>
+		<%= f.text_area :content, placeholder: "Lorem Ipsum" %>
+		<%= f.hidden_field :user_id, value: params[:user_id] %>
+	</div>
+	<%= f.submit "Save article" %>
+<% end %>

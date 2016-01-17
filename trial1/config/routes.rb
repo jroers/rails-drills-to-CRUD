@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   post "/sessions", to: "sessions#create"
 
   get "/users/:user_id/articles", to: "articles#index", as: "user_articles"
+  get "/users/:user_id/articles/new", to: "articles#new", as: "new_article"
+  post "/users/:user_id/articles", to: "articles#create"
 end
