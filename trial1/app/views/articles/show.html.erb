@@ -1,2 +1,4 @@
 <h1>"<%= @article.title %>" by <%= @user.first_name.capitalize %></h1>
 <p><%= @article.content %><p>
+<%= link_to "Edit", "/users/#{@user.id}/articles/#{@article.id}/edit" %>
+<%= link_to "Delete", "/users/#{@user.id}/articles/#{@article.id}/delete" %>

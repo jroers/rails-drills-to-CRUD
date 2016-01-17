@@ -1,6 +1,6 @@
 <h1>New post:</h1>
 
-<%= form_for @article, url: "/users/:user_id/articles" do |f| %>
+<%= form_for @article, url: "/users/#{params[:user_id]}/articles" do |f| %>
 	<div>
 		<%= f.text_field :title, placeholder: "Title" %>
 	</div>

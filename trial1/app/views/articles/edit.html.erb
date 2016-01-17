@@ -1,0 +1,11 @@
+<h1>Edit post:</h1>
+
+<%= form_for @article, url: "/users/#{params[:user_id]}/articles/#{params[:id]}", method: "patch" do |f| %>
+	<div>
+		<%= f.text_field :title, value: @article.title %>
+	</div>
+	<div>
+		<%= f.text_area :content, value: @article.content %>
+	</div>
+	<%= f.submit "Save article" %>
+<% end %>
