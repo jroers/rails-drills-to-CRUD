@@ -1,2 +1,8 @@
-<h1>Welcome back, <%= @user.first_name.capitalize %></h1>
-<p>This is where I'll have an article count.</p>
+<h1>Welcome back, 
+<% if @user.first_name %>
+	<%= @user.first_name.capitalize %>
+<% else %>
+	<%= @user.email %>
+<% end %>
+</h1>
+<p>This user currently has <%= @user.articles.count %> posts.</p>
