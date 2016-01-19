@@ -27,8 +27,11 @@ class ArticlesController < ApplicationController
 		redirect_to "/users/#{params[:user_id]}/articles/#{params[:id]}"
 	end
 
-	def delete
+	def destroy
 		find_article
+		@article.destroy
+
+		redirect_to "/users/#{params[:user_id]}/articles/"
 	end
 
 	private

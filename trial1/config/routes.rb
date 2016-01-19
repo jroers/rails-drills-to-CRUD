@@ -16,6 +16,5 @@ Rails.application.routes.draw do
   get "/users/:user_id/articles/:id", to: "articles#show", as: "user_article"
   get "/users/:user_id/articles/:id/edit", to: "articles#edit", as: "edit_article"
   patch "/users/:user_id/articles/:id", to: "articles#update"
-  get "/users/:user_id/articles/:id/delete", to: "articles#delete", as: "delete_article"
-  destroy "/users/:user_id/articles/:id", to: "articles#destroy"
+  delete "/users/:user_id/articles/:id", to: "articles#destroy"
 end
